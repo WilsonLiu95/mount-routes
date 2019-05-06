@@ -26,6 +26,9 @@ var mount = require('mount-routes');
 // with path & api dump
 mount(app,  __dirname + '/routes2', true);
 
+// add by wilsonsliu, support prefix path
+mount(app,  __dirname + '/routes2', true, 'recom/');
+
 // start server
 app.listen(23018)
 ```

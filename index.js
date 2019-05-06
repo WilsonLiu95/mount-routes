@@ -111,18 +111,18 @@ function _dump(routes_folder_path) {
  * @return 
  * @api public
  */
-function mount_with_folder(app, routes_folder_path) {
+function mount_with_folder(app, routes_folder_path, is_debug, pre) {
   stack = [];// empty when enter
   
   var r         = arguments[1] || './routes';
-  var is_debug  = arguments[2] || false;
+  is_debug  = is_debug || false;
   
   r = path.resolve(path.dirname(require.main.filename), r)
   
   // console.log('mount routes_folder_path = ' + r)
   routes = requireDirectory(module, r);
   
-  mount(app) ;
+  mount(app, routes, pre) ;
   
   if(is_debug){
     _dump (routes_folder_path);

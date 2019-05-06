@@ -1,6 +1,6 @@
 {
-  "name": "mount-routes",
-  "version": "1.0.7",
+  "name": "@tencent/mount-routes",
+  "version": "1.0.8",
   "description": "mount-routes = auto mount express routes with routes_folder_path",
   "main": "index.js",
   "scripts": {
